@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Evelist</string>
+    <string name="nama">"Nama :   "</string>
+    <string name="event_image">Event Image</string>
+    <string name="guest_image">Guest Image</string>
+    <string name="masukan_nama">masukan nama…</string>
+    <string name="next">Next</string>
+    <string name="pilih_event">Pilih event</string>
+    <string name="pilih_guest">Pilih guest</string>
 </resources>
