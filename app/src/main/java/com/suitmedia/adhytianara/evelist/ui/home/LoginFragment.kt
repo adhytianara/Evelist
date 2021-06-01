@@ -30,13 +30,17 @@ class LoginFragment : Fragment(), View.OnClickListener {
     override fun onClick(view: View?) {
         if (view?.id == R.id.btn_next) {
             val name = binding.inputName.text.toString()
-            viewModel.setName(name)
 
-            val fragment = MenuFragment()
-
-            val transaction = parentFragmentManager.beginTransaction()
-            transaction.replace(R.id.frame_layout, fragment)
-            transaction.commit()
+            if (name.isNotBlank() && name.isNotEmpty()) {
+                viewModel.setName(name)
+                val fragment = MenuFragment()
+                parentFragmentManager
+                    .beginTransaction()
+                    .replace(R.id.frame_layout, fragment)
+                    .commit()
+            } else {
+                binding.inputName.error = "Name cannot be empty or blank."
+            }
         }
     }
 
