@@ -2,6 +2,7 @@ package com.suitmedia.adhytianara.evelist.repository
 
 import com.suitmedia.adhytianara.evelist.data.DataSource
 import com.suitmedia.adhytianara.evelist.data.Event
+import com.suitmedia.adhytianara.evelist.data.Guest
 
 class Repository(private val dataSource: DataSource) {
 
@@ -16,5 +17,9 @@ class Repository(private val dataSource: DataSource) {
 
     fun getEventList(): ArrayList<Event> {
         return dataSource.getEventList()
+    }
+
+    suspend fun getGuestList(): List<Guest> {
+        return dataSource.getGuestList()
     }
 }

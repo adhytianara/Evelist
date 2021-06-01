@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.suitmedia.adhytianara.evelist.di.Injection
 import com.suitmedia.adhytianara.evelist.repository.Repository
 import com.suitmedia.adhytianara.evelist.ui.event.EventViewModel
+import com.suitmedia.adhytianara.evelist.ui.guest.GuestViewModel
 
 class ViewModelFactory private constructor(private val mRepository: Repository) :
     ViewModelProvider.NewInstanceFactory() {
@@ -27,6 +28,9 @@ class ViewModelFactory private constructor(private val mRepository: Repository) 
         return when {
             modelClass.isAssignableFrom(EventViewModel::class.java) -> {
                 EventViewModel(mRepository) as T
+            }
+            modelClass.isAssignableFrom(GuestViewModel::class.java) -> {
+                GuestViewModel(mRepository) as T
             }
             else -> throw Throwable("Unknown ViewModel class: " + modelClass.name)
         }

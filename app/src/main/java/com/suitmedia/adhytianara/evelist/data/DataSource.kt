@@ -1,6 +1,7 @@
 package com.suitmedia.adhytianara.evelist.data
 
 import com.google.gson.Gson
+import com.suitmedia.adhytianara.evelist.data.api.RetrofitInstance
 import com.suitmedia.adhytianara.evelist.utils.JsonHelper
 import org.json.JSONException
 import org.json.JSONObject
@@ -32,5 +33,9 @@ class DataSource private constructor(private val jsonHelper: JsonHelper) {
             e.printStackTrace()
         }
         return list
+    }
+
+    suspend fun getGuestList(): List<Guest> {
+        return RetrofitInstance.api.getGuestList()
     }
 }
