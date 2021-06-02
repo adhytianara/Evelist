@@ -2,9 +2,11 @@ package com.suitmedia.adhytianara.evelist.ui.event
 
 import android.content.Intent
 import android.os.Bundle
+import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.suitmedia.adhytianara.evelist.R
 import com.suitmedia.adhytianara.evelist.databinding.ActivityEventBinding
 import com.suitmedia.adhytianara.evelist.ui.home.MenuFragment.Companion.EVENT_DATA
 import com.suitmedia.adhytianara.evelist.viewmodel.ViewModelFactory
@@ -19,7 +21,9 @@ class EventActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityEventBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        title = "EVENT"
+
+        supportActionBar?.displayOptions = ActionBar.DISPLAY_SHOW_CUSTOM;
+        supportActionBar?.setCustomView(R.layout.custom_action_bar);
 
         val factory = ViewModelFactory.getInstance(this)
         viewModel = ViewModelProvider(this, factory)[EventViewModel::class.java]

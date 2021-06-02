@@ -48,6 +48,7 @@ class EventAdapter : RecyclerView.Adapter<EventAdapter.ListViewHolder>() {
                     .into(imgEvent)
                 tvEventName.text = data.name
                 tvEventDate.text = data.date
+                tvEventSummary.text = data.summary
             }
         }
 

@@ -14,4 +14,7 @@ data class Event(
 
     @field:SerializedName("image_path")
     val imageUrl: String,
+
+    @field:SerializedName("summary")
+    val summary: String,
 )
