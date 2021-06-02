@@ -48,6 +48,10 @@ class GuestAdapter : RecyclerView.Adapter<GuestAdapter.ListViewHolder>() {
                     )
                     .into(imgGuest)
                 tvGuestName.text = data.name
+                tvGuestBirthdate.text = data.birthdate
+                (tvGuestMonthIsPrime.text.toString() + data.monthIsPrime.toString()).also {
+                    binding.tvGuestMonthIsPrime.text = it
+                }
             }
         }
 

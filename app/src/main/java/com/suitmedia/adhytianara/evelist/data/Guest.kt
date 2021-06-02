@@ -12,5 +12,7 @@ data class Guest(
     @field:SerializedName("birthdate")
     val birthdate: String,
 
-    val imageUrl: String,
+    var imageUrl: String,
+
+    var monthIsPrime: Boolean,
 )

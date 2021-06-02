@@ -12,8 +12,27 @@ class GuestViewModel(private val mRepository: Repository) : ViewModel() {
 
     fun getGuestList() {
         viewModelScope.launch {
-            guestList.value = mRepository.getGuestList()
+            val guestListRes = mRepository.getGuestList()
+            setGuestMonthIsPrime(guestListRes)
+            guestList.value = guestListRes
         }
+    }
+
+    private fun setGuestMonthIsPrime(guestListRes: List<Guest>) {
+        guestListRes.forEach { guest ->
+            guest.monthIsPrime = getMonthIsPrime(guest.birthdate)
+        }
+    }
+
+    private fun getMonthIsPrime(birthdate: String): Boolean {
+        val arrBirthdate = birthdate.split("-")
+        val month = arrBirthdate[1].toInt()
+        for (i in 2..month / 2) {
+            if (month % i == 0) {
+                return false
+            }
+        }
+        return true
     }
 
     fun getGuestMessage(birthdate: String): String {

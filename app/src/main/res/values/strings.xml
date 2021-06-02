@@ -10,4 +10,5 @@
     <string name="continue_txt">Continue</string>
     <string name="cancel">Cancel</string>
     <string name="activity_cannot_be_null">Activity cannot be null</string>
+    <string name="month_is_prime">"Month is prime: "</string>
 </resources>
