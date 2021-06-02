@@ -33,11 +33,8 @@ class LoginFragment : Fragment(), View.OnClickListener {
 
             if (name.isNotBlank() && name.isNotEmpty()) {
                 viewModel.setName(name)
-                val fragment = MenuFragment()
-                parentFragmentManager
-                    .beginTransaction()
-                    .replace(R.id.frame_layout, fragment)
-                    .commit()
+                val isPalindromeDialogFragment = IsPalindromeDialogFragment()
+                isPalindromeDialogFragment.show(parentFragmentManager, "LoginFragment")
             } else {
                 binding.inputName.error = "Name cannot be empty or blank."
             }
