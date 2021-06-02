@@ -4,11 +4,13 @@
     <string name="event_image">Event Image</string>
     <string name="guest_image">Guest Image</string>
     <string name="masukan_nama">masukan nama…</string>
-    <string name="next">Next</string>
+    <string name="selesai">Selesai</string>
     <string name="pilih_event">Pilih event</string>
     <string name="pilih_guest">Pilih guest</string>
     <string name="continue_txt">Continue</string>
     <string name="cancel">Cancel</string>
     <string name="activity_cannot_be_null">Activity cannot be null</string>
     <string name="month_is_prime">"Month is prime: "</string>
+    <string name="selamat_datang">Selamat Datang!</string>
+    <string name="profile">Profile</string>
 </resources>
