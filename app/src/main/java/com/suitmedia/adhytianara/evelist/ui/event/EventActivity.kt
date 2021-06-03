@@ -59,7 +59,7 @@ class EventActivity : AppCompatActivity() {
     }
 
     private fun displayMapsFragment() {
-        val myFragment = MapsFragment()
+        val myFragment = EventListMapsFragment()
         supportFragmentManager
             .beginTransaction()
             .replace(R.id.frame_layout, myFragment, MAPS_FRAGMENT)
