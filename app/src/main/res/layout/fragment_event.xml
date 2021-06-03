@@ -3,10 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.event.EventActivity">
+    tools:context=".ui.event.EventListFragment">
 
-    <FrameLayout
-        android:id="@+id/frame_layout"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_events"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        tools:listitem="@layout/item_row_event" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

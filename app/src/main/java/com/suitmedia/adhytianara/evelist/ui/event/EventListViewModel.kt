@@ -5,7 +5,7 @@ import androidx.lifecycle.ViewModel
 import com.suitmedia.adhytianara.evelist.data.Event
 import com.suitmedia.adhytianara.evelist.repository.Repository
 
-class EventViewModel(private val mRepository: Repository) : ViewModel() {
+class EventListViewModel(private val mRepository: Repository) : ViewModel() {
     val eventList = MutableLiveData<List<Event>>()
 
     fun getEventList() {

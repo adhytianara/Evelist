@@ -5,7 +5,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.suitmedia.adhytianara.evelist.di.Injection
 import com.suitmedia.adhytianara.evelist.repository.Repository
-import com.suitmedia.adhytianara.evelist.ui.event.EventViewModel
+import com.suitmedia.adhytianara.evelist.ui.event.EventListViewModel
 import com.suitmedia.adhytianara.evelist.ui.guest.GuestViewModel
 
 class ViewModelFactory private constructor(private val mRepository: Repository) :
@@ -26,8 +26,8 @@ class ViewModelFactory private constructor(private val mRepository: Repository) 
     @Suppress("UNCHECKED_CAST")
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         return when {
-            modelClass.isAssignableFrom(EventViewModel::class.java) -> {
-                EventViewModel(mRepository) as T
+            modelClass.isAssignableFrom(EventListViewModel::class.java) -> {
+                EventListViewModel(mRepository) as T
             }
             modelClass.isAssignableFrom(GuestViewModel::class.java) -> {
                 GuestViewModel(mRepository) as T
