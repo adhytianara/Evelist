@@ -48,10 +48,22 @@
         android:id="@+id/tv_guest_month_is_prime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/month_is_prime"
         android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="@+id/img_guest"
         app:layout_constraintStart_toStartOf="@+id/img_guest"
+        app:layout_constraintTop_toBottomOf="@+id/tv_guest_birthdate" />
+
+    <TextView
+        android:id="@+id/tv_guest_is_prime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_guest_month_is_prime"
+        app:layout_constraintEnd_toEndOf="@+id/img_guest"
+        app:layout_constraintStart_toEndOf="@+id/tv_guest_month_is_prime"
         app:layout_constraintTop_toBottomOf="@+id/tv_guest_birthdate"
-        android:text="@string/month_is_prime" />
+        tools:text="true" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

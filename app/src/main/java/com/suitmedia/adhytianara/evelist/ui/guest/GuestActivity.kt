@@ -27,9 +27,13 @@ class GuestActivity : AppCompatActivity() {
         viewModel.getGuestList()
         observeGuestList()
 
-
         setupRecyclerViewAdapter()
         setupRecyclerView()
+
+        binding.swipeContainer.setOnRefreshListener {
+            viewModel.getGuestList()
+            binding.swipeContainer.isRefreshing = false
+        }
     }
 
     private fun observeGuestList() {
