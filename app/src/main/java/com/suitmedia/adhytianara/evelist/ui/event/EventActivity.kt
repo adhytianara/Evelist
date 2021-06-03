@@ -44,6 +44,10 @@ class EventActivity : AppCompatActivity() {
                 displayEventListFragment()
             }
         }
+        val btnBack = actionBarView.findViewById<ImageButton>(R.id.btn_back)
+        btnBack.setOnClickListener {
+            finish()
+        }
     }
 
     private fun displayEventListFragment() {
